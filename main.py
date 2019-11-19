@@ -8,7 +8,7 @@ form = """
 <html>
   <head>
     <style>
-      form {
+      form { #metadata for styling
         background-color: #eee;
         padding: 20px;
         margin: 0 auto;
@@ -23,14 +23,18 @@ form = """
       }
     </style>
   </head>
-  <body>
-  <h1> fuck </h1>
+  <body> 
+    <form method='POST'>
+      <label for='rot'>Rotate by: </label>
+      <input type='text' name='rot' id='rot' value='0'></input>
+      <textarea type='text' name='text' id='rot'></textarea>
+    </form>
   </body>
 </html>
 """
 
 @app.route("/")
 def index():
-    return "Hello World"
+    return form
 
 app.run()
